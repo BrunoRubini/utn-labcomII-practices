@@ -1,0 +1,46 @@
+* {
+    font-family: sans-serif;
+}
+
+h1{
+    font-size: 24px;
+    color:  #242424;
+    font-weight: 900;
+}
+h2{
+    font-size: 20px;
+    color :#606060;
+    font-weight: 800;
+}
+p{
+    font-size: 14px;
+    margin: 30px 0px 30px 0px;
+}
+ul{
+    font-family: monospace;
+    font-size: 18px;
+    margin: 0px 0px 0px 100px;
+    padding: 20px;
+    border: 2px;
+    border-color: blue;
+    border-style: solid;
+    max-width: 40%;
+    list-style-type: none;
+}
+a{
+    font-weight: bold;
+    color: orange;
+}
+
+.neuquen, .rioNegro{
+    color: green;
+}
+html {
+    background-color: rgb(245, 245, 245);
+}
+li{
+    padding: 10px;
+}
+li:hover {
+    background-color: rgba(0, 0, 0, 0.1); 
+}
