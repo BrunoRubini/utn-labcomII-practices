@@ -38,8 +38,13 @@ html {
     }
     .nav-item:hover {
         /* aplicar color de fondo */
+        background-color: black;
         }
     .nav-item:hover a {
-        
+        /* aplicar color de texto de los links*/
+        color: aqua;
         }
-       
+    .nav-item-login a{
+        color: silver;
+        font-weight: bold;
+    }  
