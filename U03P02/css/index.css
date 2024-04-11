@@ -17,6 +17,9 @@ html {
     padding-right: 30px;
     padding-top: 10px;
     padding-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     }
     .logo {
     color: #fff;
@@ -25,6 +28,7 @@ html {
     }
     .nav-links {
     list-style: none;
+    display: flex;
     }
     .nav-item a {
     display: inline-block;
@@ -32,4 +36,10 @@ html {
     text-decoration: none;
     color: #fff;
     }
-   
+    .nav-item:hover {
+        /* aplicar color de fondo */
+        }
+    .nav-item:hover a {
+        
+        }
+       
