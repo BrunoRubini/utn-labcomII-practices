@@ -1,45 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario de Contacto</title>
+
+    <link rel="stylesheet" href="css/index.css" />
+  </head>
+  <body>
     <!-- Encabezado -->
     <header>
-        <h1>Contacto</h1>
-        <p>Este es el encabezado de la pagina web</p>
-      </header>
-      <div class="container">
-        <!-- Navegación / cotenedor izquierdo -->
-        <nav>
-          <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="multimedia.html">Multimedia</a></li>
-            <li><a href="contact.html">Contacto</a></li>
-          </ul>
-        </nav>
-        <!-- Contenedor principal -->
-        <main>
-          <section>
-            <h2>Lorum Ipsum</h2>
-            <p>
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-              nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
-              volutpat.
-            </p>
-          </section>
-        </main>
-        <!-- Contenedor secundario / derecho -->
-        <div class="right">
-          <h2>Info</h2>
-          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
-        </div>
+      <h1>Bruno Rubini</h1>
+      <p>Estudiante de la Tecnicatura Universitaria en Programación</p>
+    </header>
+    <div class="container">
+      <!-- Navegación / cotenedor izquierdo -->
+      <nav>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="multimedia.html">Multimedia</a></li>
+          <li><a href="contact.html">Contacto</a></li>
+        </ul>
+      </nav>
+      <!-- Contenedor principal -->
+      <main>
+        <br />
+        <section>
+          <hr />
+          <form action="contact.html"">
+            <table>
+              <tr>
+                <td><label for="nombre">Nombre:</label></td>
+                <td><input type="text" id="nombre" name="nombre" required /></td>
+              </tr>
+              <tr>
+                <td><label for="email">Email:</label></td>
+                <td>
+                  <input type="email" id="email" name="email" required />
+                </td>
+              </tr>
+              <tr>
+                <td><label for="edad">Edad:</label></td>
+                <td>
+                  <input
+                    type="number"
+                    id="edad"
+                    name="edad"
+                    required
+                    min="0"
+                    max="120"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td><label for="color">Color favorito:</label></td>
+                <td>
+                  <select name="color" id="color" required>
+                    <option value="">Azul</option>
+                    <option value="">Amarillo</option>
+                    <option value="">Rojo</option>
+                    <option value="">Negro</option>
+                    <option value="">Blanco</option>
+                    <option value="">Rosa</option>
+                    <option value="">Verde</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td><label for="comentario">Comentario:</label></td>
+                <td>
+                  <textarea
+                    id="comentario"
+                    name="comentario"
+                    minlength="10"
+                    required
+                  ></textarea>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <button type="submit">Enviar</button>
+                </td>
+              </tr>
+            </table>
+          </form>
+          
+        </section>
+      </main>
+      <!-- Contenedor secundario / derecho -->
+      <div class="right">
+        <h2>Info</h2>
+        <p>Aprendiendo: <br />Python <br />HTML <br />CSS <br />JavaScript</p>
       </div>
-      <!-- Pie de Página-->
-      <footer>
-        <p>© copyright labcomII.com</p>
-      </footer>
-</body>
+    </div>
+    <!-- Pie de Página-->
+    <footer>
+      <p>brunorubini06@gmail.com</p>
+      <p>© copyright labcomII.com</p>
+    </footer>
+  </body>
 </html>
