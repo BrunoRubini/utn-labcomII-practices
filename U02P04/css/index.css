@@ -66,7 +66,21 @@
         width: 300;
         height: 315px;
       }
-
+      #logoCSS{
+        padding-left: 50px;
+        width: 300;
+        height: 315px;
+      }
+      #logoJS{
+        padding-left: 15px;
+        padding-bottom: 45px;
+      }
+      #logoPython{
+        width: 280px;
+        height: 280px;
+        padding-left: 50px;
+        padding-bottom: 40px;
+      }
       /* For mobile phones: */
       @media only screen and (max-width: 620px) {
         nav,
