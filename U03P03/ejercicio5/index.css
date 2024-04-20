@@ -1,0 +1,16 @@
+.main{
+    display: flex;
+    padding: 12px 24px; 
+    min-height: 100vh;
+    font-family: sans-serif; 
+}
+.sidebar{
+    background-color: aqua;
+    padding: 12px 24px; 
+    
+}
+.contenido{
+    background-color: #007bff;
+    padding: 12px 24px; 
+    flex: 1;
+}
