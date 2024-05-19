@@ -1,40 +1,4 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <title>Calculadora de Venta de Divisas</title>
-</head>
-<body>
-    <h1>Calculadora de Venta de Divisas</h1>
-    <form id="convertidor">
-        <label for="cantidad_pesos">Cantidad de Pesos Argentinos:</label>
-        <input type="number" id="cantidad_pesos" name="cantidad_pesos" required><br><br>
-        
-        <label for="monedas">Selecciona la Moneda Extranjera:</label>
-        <select id="monedas" name="monedas" required>
-            <option value="">Elegir una moneda</option>
-            <option value="dolar">Dólares</option>
-            <option value="euro">Euros</option>          
-        </select><br><br>
-        
-        <button type="button" onclick="calcularConversion()">Calcular</button>
-        
-    </form>
 
-    <p id="resultado"></p>
-    <hr>
-
-    <h2>Agregar Nueva Moneda</h2>
-    <form id="agregar-moneda">
-        <label for="nombre_moneda">Nombre de la Moneda:</label>
-        <input type="text" id="nombre_moneda" name="nombre_moneda" required><br><br>
-        
-        <label for="costo_conversion">Costo de Conversión en Pesos:</label>
-        <input type="number" id="costo_conversion" name="costo_conversion" required><br><br>
-        
-        <button type="button" onclick="agregarMoneda()">Agregar Moneda</button>
-    </form>
-    <script>
         var cotizaciones = {
             dolar : 1150, euro : 1200,
         }
@@ -86,6 +50,4 @@
         document.getElementById('nombre_moneda').value = '';
         document.getElementById('costo_conversion').value = '';
     }
-    </script>
-</body>
-</html>
+    
