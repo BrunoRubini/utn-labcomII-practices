@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5</title>
+</head>
+<body>
+    <form action="">
+        <label for="nombre">Nombre: </label>
+        <input type="text" id="nombre">
+        <label for="apellido">Apellido: </label>
+        <input type="text" id="apellido">
+        <label for="Domicilio">Domicilio: </label>
+        <input type="text" id="domicilio">
+        <label for="Curso">Curso: </label>
+        <input type="text" id="curso">
+        <label for="Carrera">Carrera: </label>
+        <input type="text" id="carrera">
+        <label for="materia">Materia: </label>
+        <input type="text" id="materia">
+        <label for="nombre">Nota primer parcial: </label>
+        <input type="text" id="nota">
+        <br>
+        <button id="btn-mostrar" type="button">Mostrar datos: </button>
+        <br>
+        <p id="datos"></p>
+    </form>
+    <script>
+    const btnMostrar = document.getElementById('btn-mostrar');
+    const datos = document.getElementById('datos');
+
+    btnMostrar.addEventListener('click', function() {
+        const nombreValor = document.getElementById('nombre').value;
+        const apellidoValor = document.getElementById('apellido').value;
+        const domicilioValor = document.getElementById('domicilio').value;
+        const cursoValor = document.getElementById('curso').value;
+        const carreraValor = document.getElementById('carrera').value;
+        const materiaValor = document.getElementById('materia').value;
+        const notaValor = document.getElementById('nota').value;
+        /*Con las comillas invertidas, el contenido entre ${} se evaluará como JavaScript y se incluirá en la cadena resultante. 
+        Esto es útil para crear cadenas que contienen valores de variables de una manera más legible y concisa.*/
+        const mensaje = `Nombre: ${nombreValor}<br>
+                        Apellido: ${apellidoValor}<br>
+                        Domicilio: ${domicilioValor}<br>
+                        Curso: ${cursoValor}<br>
+                        Carrera: ${carreraValor}<br>
+                        Materia: ${materiaValor}<br>
+                        Nota primer parcial: ${notaValor}`;
+        console.log(mensaje);
+        datos.innerHTML = mensaje;
+    });
+    </script>
+</body>
+</html>
