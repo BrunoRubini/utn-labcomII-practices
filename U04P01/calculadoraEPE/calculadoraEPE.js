@@ -1,41 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Calculadora</title>
-  </head>
-  <body>
-    <label> Tipo de propiedad:</label>
-    <input
-      type="radio"
-      value="Residencial"
-      name="tipo_propiedad"
-      id="Residencial"
-      checked
-    />
-    Residencial
-    <input
-      type="radio"
-      value="Industrial"
-      name="tipo_propiedad"
-      id="Industrial"
-    />
-    Industrial
-    <br />
-    <select name="Zonas" id="Zonas">
-      <option value="0">Distrito Centro</option>
-      <option value="1">Distrito Sur</option>
-      <option value="2">Distrito Oeste</option>
-      <option value="3">Distrito Norte</option>
-    </select>
-    <br />
-    <label for="kwhora">Ingrese kWh: </label>
-    <input type="number" id="kwh"  />
-    <br />
-    <button id="btn-calcular">Calcular</button>
-  </body>
-  <script>
+
     const costo_servicio = 102;
     
 
@@ -81,6 +44,5 @@
         console.log(precio_kwh)
         console.log(iva)
         console.log(precio_final)
+        alert(precio_final + "$")
     })
-  </script>
-</html>
