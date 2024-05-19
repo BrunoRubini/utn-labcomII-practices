@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio1</title>
+</head>
+<body>
+    <h2>Ingrese 3 números: </h2>
+    <form action="">
+        <input type="number" id="number1">
+        <input type="number" id="number2">
+        <input type="number" id="number3">
+        <button id="btn-calcular" type="button">CALCULAR MAYOR</button>
+        <p id="resultado"></p>
+    </form>
+    <script>
+        const btn_calcular = document.getElementById('btn-calcular');
+        const number1 = document.getElementById('number1');
+        const number2 = document.getElementById('number2');
+        const number3 = document.getElementById('number3');
+        const resultado = document.getElementById('resultado');
+        
+        function calcular_mayor() {
+            const num1 = parseFloat(number1.value);
+            const num2 = parseFloat(number2.value);
+            const num3 = parseFloat(number3.value);
+            
+            let mayor;
+            if (num1 > num2 && num1 > num3) {
+                mayor = num1;
+            } else if (num2 > num1 && num2 > num3) {
+                mayor = num2;
+            } else {
+                mayor = num3;
+            }
+            return mayor;
+        }
+        btn_calcular.addEventListener("click", function() {
+            const mayor = calcular_mayor();
+            resultado.innerText = "El número mayor es: " + mayor;
+        });
+        </script>
+</body>
+</html>
