@@ -4,13 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    2
     <title>Parcial 2</title>
-    <link rel="stylesheet" href="css/styles.css" />
+    
   </head>
   <body>
     <div class="product-image">
-        INSERTAR IMAGEN ACA
+        <img src="img/iphones.jpg" alt="imagen iphone" id="imagen-producto">
     </div>
     <div class="product-details">
       <div class="product-details-content">
@@ -18,7 +17,7 @@
         <form action="">
           <div class="form-control">
             <label>Color</label>
-            <select onchange="changeProductImage()">
+            <select onchange="changeProductImage()" id="selector-color">
               <option disabled selected value="0">
                 -- Seleccione una opción --
               </option>
@@ -41,31 +40,21 @@
           </div>
           <div class="form-control">
             <label>Cantidad</label>
-            3
+            
             <input type="number" id="cantidad_telefonos"/>
           </div>
           <div class="form-control">
             <button type="button" onclick="calculatePrice()">Cotizar</button>
           </div>
           <div id="result" class="form-control">
-            Resultado cotización o error
             <p id="resultado"></p>
             <hr>
           </div>
         </form>
       </div>
     </div>
+
+    <script src="iphones_js.js"></script>
   </body>
-<script>
-    var precios = {
-        '128': 150000,
-        '256': 165000,
-        '512': 180000,
-    }
-    function calculatePrice(){
-        opcion_gb = document.getElementById('selector-gb') // traigo la opcion de los GBs del selector
-        cantidad = document.getElementById('cantidad_telefonos') // traigo la cantidad de telefonos ingresados
-        
-    }
-</script>
+
 </html>
