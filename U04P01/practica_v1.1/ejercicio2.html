@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio 2</title>
+</head>
+<body>
+    <h2>Ingrese un número:</h2>
+    <label for="numero">Número: </label>
+    <input type="number" id="number">
+    <button id="btn-analizar">Analizar</button>
+    <p id="respuesta"></p>
+</body>
+<script>
+    const numero = document.getElementById('number')
+    const btn_analizar = document.getElementById('btn-analizar')
+    const respuesta = document.getElementById('respuesta')
+    btn_analizar.addEventListener('click',function (){
+        let rta;
+        if(numero.value > 0){
+            rta = 'Positivo'
+        }else if(numero.value < 0){
+            rta = 'Negativo'
+        }else {
+            rta = 'Cero'
+        }
+        respuesta.innerText = 'El número ' + numero.value + ' es: ' + rta;
+    })
+</script>
+</html>
