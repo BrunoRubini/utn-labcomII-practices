@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio6
+    </title>
+</head>
+<body>
+    <label for="palabra">Ingrese la palabra clave: </label>
+    <input type="text" id="clave">
+    <button id="btn-validar">VALIDAR</button>
+    <p id="respuesta"></p>
+    <hr>
+    <script>
+        const palabra_adivinar = 'hola';
+        
+        const btn_validar = document.getElementById('btn-validar');
+        const respuesta = document.getElementById('respuesta');
+        var i = 0;
+        btn_validar.addEventListener('click',function(){
+            let rta;
+            let color;
+            
+                const clave = document.getElementById('clave');
+                if(palabra_adivinar == clave.value){
+                    rta = 'Acceso Concedido';
+                    color = 'green'
+                    i = 0;
+                }else{
+                    rta = 'Clave Incorrecta'
+                    color = 'red'
+                    i++;
+                }
+                respuesta.innerText = rta;
+                respuesta.style.color = color;
+                if (i >= 3) {
+                alert('Intruso detectado. Se ha excedido el número máximo de intentos.');
+                // Desactivar el botón después de 3 intentos fallidos
+                btn_validar.disabled = true;
+            }
+            
+        })
+    </script>
+</body>
+</html>
