@@ -10,10 +10,9 @@ function revertirNro(num) {
     while (num > 0) {
         // Obtenemos el último dígito y lo añadimos al resultado como string
         res += (num % 10).toString();
-        // Eliminamos el último dígito del número
+        // lo convierto en entero para quitar el decimal
         num = parseInt(num / 10);
     }
-    // Convertimos el resultado final en número nuevamente para evitar ceros iniciales
     return (res);
 }
 btn_aceptar.onclick = function (e) {
