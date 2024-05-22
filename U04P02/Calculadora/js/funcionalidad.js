@@ -36,8 +36,10 @@ function init() {
     ];
     let num1 = null;
     let num2 = "";
+    var res;
     let operador = null;
-    // agregar el numero y operando en la pantalla
+    let operador2 = null;
+    // agregar el numero en la pantalla
     arreglo_botones.forEach((boton) => {
         boton.onclick = function (e) {
             if (resultado.textContent != 'Math Error') {
@@ -58,13 +60,20 @@ function init() {
         };
 
     });
-
+    //agregar operando en la pantalla
     suma.onclick = function (e) {
-        if (num1 != null) {
-            if (operador == null) {
+        if (resultado.textContent != '' && resultado.textContent[resultado.textContent.length - 1] != '+' && 
+        resultado.textContent[resultado.textContent.length - 1] != '-' && resultado.textContent[resultado.textContent.length - 1] != '*' 
+        && resultado.textContent[resultado.textContent.length - 1] != '/') {
+            
+            if (resultado.textContent.includes('+')) {
+                num1 = parseFloat(num1)+parseFloat(num2);
+                resultado.textContent = num1;
+                // revisar suma operandos multiples
+            }
                 operador = "+";
                 resultado.textContent += "+";
-            }
+            
         }
 
     }
@@ -101,7 +110,7 @@ function init() {
         num2 = "";
     }
     igual.onclick = function (e) {
-        let res;
+        
         switch (operador) {
             case "+":
                 res = parseFloat(num1) + parseFloat(num2);
@@ -127,7 +136,7 @@ function init() {
         if (res == 'Math Error') {
             console.log("enmtree");
             num1 = null;
-        }else{
+        } else {
             num1 = res;
             num2 = '';
             operador = null;
